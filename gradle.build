@@ -9,9 +9,16 @@ node {
 
 //declare a build task
 task build
-// Declare a task to run npm_test
+
+// Declare the npm_test task
 task npm_test {
-    // Task configuration and actions go here
+    doLast {
+        // Your npm_test actions go here
+        // For example, you can run npm test or any other npm commands
+        exec {
+            commandLine "npm", "test"
+        }
+    }
 }
 //declare a task to create a zip of the app
 task zip(type: Zip) {
