@@ -9,7 +9,10 @@ node {
 
 //declare a build task
 task build
-
+// Declare a task to run npm_test
+task npm_test {
+    // Task configuration and actions go here
+}
 //declare a task to create a zip of the app
 task zip(type: Zip) {
 	from ('.') {
